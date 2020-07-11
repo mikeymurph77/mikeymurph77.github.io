@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"data":{"site":{"siteMetadata":{"title":"Mike Murphy"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"TODO","fields":{"slug":"/hello-world/hello-world/"},"frontmatter":{"date":"May 01, 2015","title":"Hello World","description":"Hello World"}}}]}},"pageContext":{}}}
