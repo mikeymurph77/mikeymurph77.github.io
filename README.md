@@ -4,6 +4,17 @@ This is my personal blog and portfolio.
 
 ---
 
+**Note:** Base branch to develop off of should be `develop`. The `master` branch is
+reserved for the static public files which the `npm run deploy` will deploy to.
+
+---
+
+**Deploy Static Files to Production:**
+*Will deploy public files to master branch*
+```
+npm run deploy
+```
+
 **Run Gatsby Locally:**
 ```
 gatsby develop
