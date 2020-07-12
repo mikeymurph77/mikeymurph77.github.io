@@ -1,5 +1,4 @@
 import React from 'react'
-// import './gallery.css'
 import {useStaticQuery, graphql} from 'gatsby'
 import styled from "styled-components"
 
