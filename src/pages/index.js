@@ -20,7 +20,7 @@ height: 300px;
 
 const TypedContainer = styled.div`
 position: absolute;
-top: 50%;
+top: 30%;
 left: 50%;
 transform: translate(-50%, -50%);
 min-width: 300px;
@@ -32,6 +32,20 @@ const TypedGreeting = styled.span`
   text-align: center;
 `;
 
+const HomepageNavContainer = styled.div`
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  text-align: center;
+  z-index: 1;
+`;
+
+const HomepageNavLink = styled.h3`
+  display: inline-block;
+`;
+
 const ParticleContainer = styled.div`
   position: absolute;
   height: 100%;
@@ -40,8 +54,30 @@ const ParticleContainer = styled.div`
   left: 0;
 `;
 
+const TechLogo = styled.img`
+  margin: 5px;
+`;
+
+const TechLink = styled.a`
+  text-decoration: none;
+  color: #fff;
+`;
+
 const Hompage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
+  const techDetailArray = [
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/react_m0etj0.png', 'React', 'https://reactjs.org/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/redux_xtheqb.png', 'Redux', 'https://redux.js.org/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/nodejs_tcs96c.png', 'Node', 'https://nodejs.org/en/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/java_ohjtsy.png', 'Java', 'https://www.java.com/en/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/spring_ura0gb.png', 'Spring', 'https://spring.io/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/ruby_zk1cwd.png', 'Ruby', 'https://www.ruby-lang.org/en/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/deno_bmshyf.png', 'Deno', 'https://deno.land/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/graphql_akku67.png', 'GraphQL', 'https://graphql.org/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/typescript_imuwe9.png', 'TypeScript', 'https://www.typescriptlang.org/'],
+    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/gatsby_boxdxk.png', 'Gatsby', 'https://www.gatsbyjs.org/'],
+  ]
+
 
   useEffect(() => {
     let typed = new Typed('#typed', {
@@ -55,12 +91,20 @@ const Hompage = ({ data, location }) => {
     });
   }, []);
 
+  const Technologies = () => (
+    techDetailArray.map(function(imgDetails, i){
+      return (
+        <TechLink href={imgDetails[2]} alt={imgDetails[1]} target='_blank'><TechLogo key={i} src={imgDetails[0]} title={imgDetails[1]} /></TechLink>
+      )
+    })
+  )
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Mike Murphy" />
 
       <TypedParticleWrapper>
-      <TypedContainer id="typed-container">
+        <TypedContainer id="typed-container">
           <div id="typed-strings">
             <p>👋 Hi! I'm Mike...</p>
             <p>I'm a Web Developer</p>
@@ -71,6 +115,15 @@ const Hompage = ({ data, location }) => {
           </div>
           <TypedGreeting id="typed"></TypedGreeting>
         </TypedContainer>
+
+        <HomepageNavContainer>
+          <HomepageNavLink><Link to={`/blog`}>Blog</Link></HomepageNavLink>
+          {'  |  '}
+          <HomepageNavLink><Link to={`/resume`}>Resume</Link></HomepageNavLink>
+          {'  |  '}
+          <HomepageNavLink><Link to={`/portfolio`}>Portfolio</Link></HomepageNavLink>
+        </HomepageNavContainer>
+
         <ParticleContainer>
           <Particles
             params={{
@@ -92,10 +145,10 @@ const Hompage = ({ data, location }) => {
               },
               particles: {
                 color: {
-                  value: "#b7b7b7"
+                  value: "#dadada"
                 },
                 links: {
-                  color: "#b7b7b7",
+                  color: "#dadada",
                   distance: 150,
                   enable: true,
                   opacity: 0.5,
@@ -135,6 +188,12 @@ const Hompage = ({ data, location }) => {
           />
         </ParticleContainer>
       </TypedParticleWrapper>
+
+      <CenteredDiv>
+        <h4>Currently Working With</h4>
+        <Technologies />
+        <p>... and much more</p>
+      </CenteredDiv>
 
     </Layout>
   )
