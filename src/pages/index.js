@@ -55,19 +55,6 @@ const TechLink = styled.a`
 
 const Hompage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
-  const techDetailArray = [
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/react_m0etj0.png', 'React', 'https://reactjs.org/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/redux_xtheqb.png', 'Redux', 'https://redux.js.org/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/nodejs_tcs96c.png', 'Node', 'https://nodejs.org/en/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/java_ohjtsy.png', 'Java', 'https://www.java.com/en/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/spring_ura0gb.png', 'Spring', 'https://spring.io/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/ruby_zk1cwd.png', 'Ruby', 'https://www.ruby-lang.org/en/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/deno_bmshyf.png', 'Deno', 'https://deno.land/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/graphql_akku67.png', 'GraphQL', 'https://graphql.org/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756211/gatsby-personal-site/technologies/typescript_imuwe9.png', 'TypeScript', 'https://www.typescriptlang.org/'],
-    ['https://res.cloudinary.com/dtghgjg3i/image/upload/v1594756212/gatsby-personal-site/technologies/gatsby_boxdxk.png', 'Gatsby', 'https://www.gatsbyjs.org/'],
-  ]
-
 
   useEffect(() => {
     let typed = new Typed('#typed', {
@@ -80,14 +67,6 @@ const Hompage = ({ data, location }) => {
       smartBackspace: false
     });
   }, []);
-
-  const Technologies = () => (
-    techDetailArray.map(function(imgDetails, i){
-      return (
-        <TechLink href={imgDetails[2]} alt={imgDetails[1]} target='_blank'><TechLogo key={i} src={imgDetails[0]} title={imgDetails[1]} /></TechLink>
-      )
-    })
-  )
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -114,13 +93,6 @@ const Hompage = ({ data, location }) => {
           <HomepageNavLink><Link to={`/portfolio`}>Portfolio</Link></HomepageNavLink>
         </HomepageNavContainer>
       </TypedParticleWrapper>
-
-      <CenteredDiv>
-        <h4>Currently Working With</h4>
-        <Technologies />
-        <p>... and much more</p>
-      </CenteredDiv>
-
     </Layout>
   )
 }
