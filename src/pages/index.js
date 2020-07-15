@@ -3,8 +3,6 @@ import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 
-import Particles from 'react-particles-js';
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Typed from 'typed.js';
@@ -44,14 +42,6 @@ const HomepageNavContainer = styled.div`
 
 const HomepageNavLink = styled.h3`
   display: inline-block;
-`;
-
-const ParticleContainer = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
 `;
 
 const TechLogo = styled.img`
@@ -123,70 +113,6 @@ const Hompage = ({ data, location }) => {
           {'  |  '}
           <HomepageNavLink><Link to={`/portfolio`}>Portfolio</Link></HomepageNavLink>
         </HomepageNavContainer>
-
-        <ParticleContainer>
-          <Particles
-            params={{
-              fpsLimit: 60,
-              backgroundMask: {
-                enable: false,
-              },
-              interactivity: {
-                detectsOn: "canvas",
-                events: {
-                  onDiv: {
-                    enable: true,
-                    elementId: "typed-container",
-                    mode: "repulse",
-                    type: "rectangle",
-                  },
-                  resize: true
-                }
-              },
-              particles: {
-                color: {
-                  value: "#dadada"
-                },
-                links: {
-                  color: "#dadada",
-                  distance: 150,
-                  enable: true,
-                  opacity: 0.5,
-                  width: 1
-                },
-                collisions: {
-                  enable: true
-                },
-                move: {
-                  direction: "none",
-                  enable: true,
-                  outMode: "bounce",
-                  random: false,
-                  speed: 4,
-                  straight: false
-                },
-                number: {
-                  density: {
-                    enable: true,
-                    value_area: 1800
-                  },
-                  value: 250
-                },
-                opacity: {
-                  value: 0.5
-                },
-                shape: {
-                  type: "polygon"
-                },
-                size: {
-                  random: true,
-                  value: 3
-                }
-              },
-              detectRetina: true
-            }}
-          />
-        </ParticleContainer>
       </TypedParticleWrapper>
 
       <CenteredDiv>
