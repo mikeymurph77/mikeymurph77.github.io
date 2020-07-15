@@ -7,6 +7,8 @@ import { MobileView, isMobile } from "react-device-detect";
 
 import MobileMenu from "./MobileMenu/mobileMenu";
 
+import ThinLogo from "../srcAssets/mike-murphy-logo-thin.svg";
+
 const NavList = styled.ul`
   margin-left: 0px;
 
@@ -43,6 +45,15 @@ const StyledLink = styled(Link)`
   color: #fff;
 `;
 
+const LogoThin = styled(ThinLogo)`
+  height: 90px;
+  width: auto;
+`;
+
+const LogoAvatarWrapper = styled.div`
+  text-align: center;
+`;
+
 const Footer = styled.footer`
   margin-top: ${rhythm(1)};
   text-align: center;
@@ -54,14 +65,16 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <img src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594746304/gatsby-personal-site/mike-murphy-logo-avatar-1_uoc8ax.png" alt="Mike Murphy" />
+      <LogoAvatarWrapper>
+        <img src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594836924/gatsby-personal-site/mike-murphy-logo-avatar-300_kwsai3.png" alt="Mike Murphy" />
+      </LogoAvatarWrapper>
     )
   } else {
     header = (
       <nav>
         <NavList>
           <Logo>
-            <StyledLink to={`/`}><img src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594762701/gatsby-personal-site/mike-murphy-logo-thin-mobile_t0duep.png" alt="Mike Murphy" /></StyledLink>
+            <StyledLink to={`/`}><LogoThin /></StyledLink>
           </Logo>
           {!isMobile && (
             <React.Fragment>
