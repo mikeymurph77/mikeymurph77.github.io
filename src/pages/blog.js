@@ -7,10 +7,7 @@ import { rhythm } from "../utils/typography"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const HeadingTitle = styled.h1`
-  margin: 0;
-`;
+import HeadingTitle from "../components/headingTitle"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
