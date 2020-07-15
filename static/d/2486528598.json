@@ -1,0 +1,1 @@
+{"errors":[{"message":"Invalid flags supplied to RegExp constructor 'circle-avatar_wgfor2.png'","locations":[{"line":10,"column":3}],"path":["avatar"]}],"data":{"avatar":null,"site":{"siteMetadata":{"author":{"name":"Mike Murphy","summary":"software developer."},"social":{"twitter":"mikeymurph77"}}}}}
