@@ -60,7 +60,7 @@ const Hompage = ({ data, location }) => {
     let typed = new Typed('#typed', {
       stringsElement: '#typed-strings',
       loop: true,
-      startDelay: 50,
+      startDelay: 10,
       typeSpeed: 100,
       backSpeed: 50,
       showCursor: false,
@@ -78,9 +78,6 @@ const Hompage = ({ data, location }) => {
             <p>👋 Hi! I'm Mike...</p>
             <p>I'm a Web Developer</p>
             <p>Based in Boston, MA</p>
-            <p>I enjoy <strong>Music</strong></p>
-            <p>I enjoy <strong>Running</strong></p>
-            <p>I enjoy ... <strong>Beer</strong></p>
           </div>
           <TypedGreeting id="typed"></TypedGreeting>
         </TypedContainer>
