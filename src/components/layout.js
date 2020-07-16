@@ -1,7 +1,7 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography";
+import { rhythm } from "../utils/typography";
 import styled from "styled-components";
 import { MobileView, isMobile } from "react-device-detect";
 
@@ -34,10 +34,6 @@ const NavItem = styled.li`
   @media screen and (min-width: 601px) {
     margin-left: 15px;
   }
-`;
-
-const HeaderNavLinks = styled.div`
-  display: inline-block;
 `;
 
 const StyledLink = styled(Link)`

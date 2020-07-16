@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import styled from "styled-components";
 import { rhythm } from "../utils/typography"
 
 import Bio from "../components/bio"

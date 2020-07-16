@@ -7,10 +7,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Typed from 'typed.js';
 
-const CenteredDiv = styled.div`
-  text-align: center;
-`;
-
 const TypedParticleWrapper = styled.div`
 position: relative;
 height: 300px;
@@ -44,20 +40,11 @@ const HomepageNavLink = styled.h3`
   display: inline-block;
 `;
 
-const TechLogo = styled.img`
-  margin: 5px;
-`;
-
-const TechLink = styled.a`
-  text-decoration: none;
-  color: #fff;
-`;
-
 const Hompage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   useEffect(() => {
-    let typed = new Typed('#typed', {
+    new Typed('#typed', {
       stringsElement: '#typed-strings',
       loop: true,
       startDelay: 10,
@@ -75,7 +62,7 @@ const Hompage = ({ data, location }) => {
       <TypedParticleWrapper>
         <TypedContainer id="typed-container">
           <div id="typed-strings">
-            <p>👋 Hi! I'm Mike...</p>
+            <p><span role="img" aria-label="Hand waving emoji">👋</span> Hi! I'm Mike...</p>
             <p>I'm a Web Developer</p>
             <p>Based in Boston, MA</p>
           </div>

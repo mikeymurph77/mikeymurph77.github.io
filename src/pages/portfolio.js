@@ -1,10 +1,71 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import styled from "styled-components"
+import { rhythm } from "../utils/typography"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeadingTitle from "../components/headingTitle"
+
+const PortfolioGrid = styled.div`
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(50px, auto);
+  margin-top: ${rhythm(1)}
+`;
+
+const Project = styled.div`
+  border-radius: 5px;
+  background-color: #191919;
+  height: 175px;
+  position: relative;
+  overflow: hidden;
+`;
+
+const ProjectImg = styled.img`
+  border-radius: 5px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-height: 160px;
+`;
+
+const Ribbon = styled.p`
+  margin: 0;
+  padding: 0;
+  background: #fbec82;
+  color: #433217;
+  padding:0.5em 0;
+  position: absolute;
+  top:0;
+  right:0;
+  transform: translateX(30%) translateY(0%) rotate(45deg);
+  transform-origin: top left;
+  z-index: 1;
+
+  :before,
+  :after {
+    content: '';
+    position: absolute;
+    top:0;
+    margin: 0 -1px; /* tweak */
+    width: 100%;
+    height: 100%;
+    background: #fbec82;
+  }
+  :before {
+    right:100%;
+  }
+
+  :after {
+    left:100%;
+  }
+`;
 
 const Portfolio = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -14,8 +75,26 @@ const Portfolio = ({ data, location }) => {
       <SEO title="Mike Murphy | Resume" />
       <Bio />
       <HeadingTitle>Portfolio</HeadingTitle>
-      <h1>Site Under Construction</h1>
-      <h3>Comming Soon...</h3>
+
+      <PortfolioGrid>
+        <Project>
+          <Ribbon>Soon!</Ribbon>
+          <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594915406/gatsby-personal-site/portfolio/a_kqy1zn.png"/>
+        </Project>
+        <a href="https://resolutiontracker.xyz/" target="_blank" rel="noreferrer">
+          <Project>
+            <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594913952/gatsby-personal-site/portfolio/Resolution_Tracker-02_ki9gc9.png"/>
+          </Project>
+        </a>
+        <Project>
+          <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594914078/gatsby-personal-site/portfolio/Logo_Final_Transparent_01_2_tqyyxd.png"/>
+        </Project>
+        <a href="https://twitter.com/mbta_mood" target="_blank" rel="noreferrer">
+          <Project>
+            <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594915300/gatsby-personal-site/portfolio/mbta-mood_1_lyirzi.png"/>
+          </Project>
+        </a>
+      </PortfolioGrid>
     </Layout>
   )
 }
