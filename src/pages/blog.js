@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
       <HeadingTitle>Posts</HeadingTitle>
       <p>Nothing to see here yet. Still working on building out the site before writing any blog posts.</p>
       {/* TODO: REMOVE THE FALSE FROM THE CONDITION BELOW */}
-      {false && posts.map(({ node }) => {
+      {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
