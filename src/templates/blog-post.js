@@ -16,6 +16,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter.featuredImage || "https://res.cloudinary.com/dtghgjg3i/image/upload/v1594836924/gatsby-personal-site/mike-murphy-logo-avatar-300_kwsai3.png"}
       />
       <article>
         <header>
@@ -95,6 +96,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage
       }
     }
   }
