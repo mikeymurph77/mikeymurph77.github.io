@@ -1,8 +1,8 @@
 ---
 title: A Genuine and Heartfelt Hello World
 date: "2020-07-20T22:12:03.284Z"
-description: "It is cheesy and maybe a little humdrum, but what better way to start off this brand spankin' new site with a genuine and heartfelt \"Hello World\"."
-"slug": "/blog/why-gatsby/"
+description: "What better way to start this brand-spankin' new site with a genuine and heartfelt \"Hello World.\" It's so cheesy and maybe a little humdrum, but I'm alright with that."
+featuredImage: https://res.cloudinary.com/dtghgjg3i/image/upload/v1595295670/gatsby-personal-site/blog-posts/helloworld_h2iu9b.png
 ---
 
 What better way to start this brand-spankin' new site with a genuine and heartfelt "Hello World." It's so cheesy and maybe a little humdrum, but I'm alright with that.
