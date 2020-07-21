@@ -6,11 +6,11 @@ module.exports = {
       name: `Mike Murphy`,
       summary: `software developer.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A personal portfolio site for the one and only Mike Murphy`,
     siteUrl: `https://mikeymurph.com/`,
     social: {
       twitter: `mikeymurph77`,
-    },
+    }
   },
   plugins: [
     `gatsby-plugin-styled-components`,

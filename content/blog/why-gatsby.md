@@ -39,7 +39,7 @@ Below is a shortlist of selling points that led me to use Gatsby for my site. It
 
 #### Great Documentation 📝
 
-When I first heard of Gatsby, I followed their introduction tutorial. A few hours later, I was ready to start building sites confidently on my own. Anything else that I wanted to learn or look up was easily accessible from their documentation. There is nothing more frustrating than jumping into an exciting project with little to no documentation, but Gatsby had everything perfectly organized, which made learning the framework a breeze.
+When I first heard of Gatsby, I followed their [introduction tutorial](https://www.gatsbyjs.org/tutorial/). A few hours later, I was ready to start building sites confidently on my own. Anything else that I wanted to learn or look up was easily accessible from their documentation. There is nothing more frustrating than jumping into an exciting project with little to no documentation, but Gatsby had everything perfectly organized, which made learning the framework a breeze.
 
 #### Lightning Fast ⚡
 
@@ -63,8 +63,8 @@ Secondly, Gatsby offers any plugin you might ever need. This extensible library 
 
 ## Alternatives to Gatsby
 Yes, Gatsby quickly became a favorite of mine, but there are many other frameworks out there, and it's best to find the one that will be of most use for **YOU**! Here is a short list matched with the relevant technology you'd likely use with it.
-- VuePress - Written in Vue
-- Hugo - Written in Go
-- Snapper - Written in Svelte
-- Next.js - Written in React
-- Jekyll - Written in Ruby
+- [VuePress](https://vuepress.vuejs.org/) - Written in Vue
+- [Hugo](https://gohugo.io/) - Written in Go
+- [Snapper](https://github.com/sveltejs/svelte) - Written in Svelte
+- [Next.js](https://nextjs.org/) - Written in React
+- [Jekyll](https://jekyllrb.com/) - Written in Ruby

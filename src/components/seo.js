@@ -86,6 +86,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  image: `https://res.cloudinary.com/dtghgjg3i/image/upload/v1595343789/gatsby-personal-site/meta-large_kavtbr.png`
 }
 
 SEO.propTypes = {
@@ -93,6 +94,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
 }
 
 export default SEO

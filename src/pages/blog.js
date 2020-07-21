@@ -15,7 +15,6 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
       <HeadingTitle>Posts</HeadingTitle>
       {/* TODO: REMOVE THE FALSE FROM THE CONDITION BELOW */}
       {posts.map(({ node }) => {
@@ -44,6 +43,8 @@ const BlogIndex = ({ data, location }) => {
           </article>
         )
       })}
+      <br />
+      <Bio />
     </Layout>
   )
 }

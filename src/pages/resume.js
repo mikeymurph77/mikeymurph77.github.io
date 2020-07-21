@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeadingTitle from "../components/headingTitle"
@@ -88,7 +87,6 @@ const Resume = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Mike Murphy | Resume" />
-      <Bio />
       <HeadingTitle>Resume</HeadingTitle>
 
       <SectionTitle>Summary</SectionTitle>
