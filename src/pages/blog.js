@@ -17,7 +17,6 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       <HeadingTitle>Posts</HeadingTitle>
-      <p>Nothing to see here yet. Still working on building out the site before writing any blog posts.</p>
       {/* TODO: REMOVE THE FALSE FROM THE CONDITION BELOW */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
