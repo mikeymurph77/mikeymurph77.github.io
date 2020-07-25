@@ -1,10 +1,12 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require('lodash')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const portfolioProject = path.resolve(`./src/templates/portfolio-project.js`)
   const result = await graphql(
     `
       {
@@ -14,11 +16,13 @@ exports.createPages = async ({ graphql, actions }) => {
         ) {
           edges {
             node {
+              id
               fields {
                 slug
               }
               frontmatter {
                 title
+                type
               }
             }
           }
@@ -35,12 +39,27 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+    const pageType = post.node.frontmatter.type;
+    const commonPages = _.filter(posts, (post) => { return post.node.frontmatter.type === pageType })
+    const pagePositionIndex = _.findIndex(commonPages, (page) => {return page.node.id === post.node.id})
+    const previous = pagePositionIndex === commonPages.length - 1 ? null : commonPages[pagePositionIndex + 1].node
+    const next = pagePositionIndex === 0 ? null : commonPages[pagePositionIndex - 1].node
+    let templateComponent;
+
+    switch (pageType) {
+      case 'blog':
+        templateComponent = blogPost;
+        break;
+      case 'project':
+        templateComponent = portfolioProject;
+        break;
+      default:
+        templateComponent = blogPost;
+    }
 
     createPage({
       path: post.node.fields.slug,
-      component: blogPost,
+      component: templateComponent,
       context: {
         slug: post.node.fields.slug,
         previous,
