@@ -2,6 +2,7 @@
 title: Why Gatsby
 date: "2020-07-20T23:12:04.284Z"
 description: "I mentioned how Gatsby led me to scrap my other site and build a brand new one from the ground up. Here's my reasoning."
+type: blog
 ---
 
 In my previous post, I mentioned how Gatsby led me to scrap my other site and build a brand new one from the ground up. Here's my reasoning.

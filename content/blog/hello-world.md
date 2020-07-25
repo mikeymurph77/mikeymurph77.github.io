@@ -3,6 +3,7 @@ title: A Genuine and Heartfelt Hello World
 date: "2020-07-20T22:12:03.284Z"
 description: "What better way to start this brand-spankin' new site with a genuine and heartfelt \"Hello World.\" It's so cheesy and maybe a little humdrum, but I'm alright with that."
 featuredImage: https://res.cloudinary.com/dtghgjg3i/image/upload/v1595295670/gatsby-personal-site/blog-posts/helloworld_h2iu9b.png
+type: blog
 ---
 
 What better way to start this brand-spankin' new site with a genuine and heartfelt "Hello World." It's so cheesy and maybe a little humdrum, but I'm alright with that.
