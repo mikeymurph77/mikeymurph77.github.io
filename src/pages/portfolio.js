@@ -23,6 +23,10 @@ const Project = styled.div`
   overflow: hidden;
 `;
 
+const ProjectLink = styled(Link)`
+  color: #fff;
+`;
+
 const ProjectImg = styled.img`
   border-radius: 5px;
   position: absolute;
@@ -77,25 +81,25 @@ const Portfolio = ({ data, location }) => {
       <PortfolioGrid>
         <Project>
           <Ribbon>Soon!</Ribbon>
-          <Link to={`/thirsty-for-beer`}>
+          <ProjectLink to={`/thirsty-for-beer`}>
             <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594915406/gatsby-personal-site/portfolio/a_kqy1zn.png" alt="Thirsty For Beer"/>
-          </Link>
+          </ProjectLink>
         </Project>
-        <Link to={`/resolution-tracker`}>
+        <ProjectLink to={`/resolution-tracker`}>
           <Project>
             <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594913952/gatsby-personal-site/portfolio/Resolution_Tracker-02_ki9gc9.png" alt="Resolution Tracker"/>
           </Project>
-        </Link>
+        </ProjectLink>
         <Project>
-          <Link to={`/your-volume`}>
+          <ProjectLink to={`/your-volume`}>
             <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594914078/gatsby-personal-site/portfolio/Logo_Final_Transparent_01_2_tqyyxd.png" alt="Your Volume"/>
-          </Link>
+          </ProjectLink>
         </Project>
-        <Link to={`/mbta-mood`}>
+        <ProjectLink to={`/mbta-mood`}>
           <Project>
             <ProjectImg src="https://res.cloudinary.com/dtghgjg3i/image/upload/v1594915300/gatsby-personal-site/portfolio/mbta-mood_1_lyirzi.png" alt="MBTA Mood"/>
           </Project>
-        </Link>
+        </ProjectLink>
       </PortfolioGrid>
     </Layout>
   )
