@@ -72,6 +72,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

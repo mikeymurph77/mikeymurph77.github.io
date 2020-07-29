@@ -1,2 +1,4 @@
+Sitemap: https://mikeymurph.com/sitemap.xml
+
 User-agent: *
-Disallow:
+Allow: /
