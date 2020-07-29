@@ -1,8 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
+import _ from "lodash"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ProjectCard from "../components/projectCard"
 import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 
@@ -14,9 +16,18 @@ const ProjectLink = styled.a`
   font-size: ${rhythm(3 / 4)}
 `;
 
+const PortfolioGrid = styled.div`
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(50px, auto);
+  margin-top: ${rhythm(1)}
+`;
+
 const PortfolioProjectTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
+  const projects = data.allMarkdownRemark.edges
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -47,6 +58,13 @@ const PortfolioProjectTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
+
+        <h2>More Projects</h2>
+        <PortfolioGrid>
+          {_.map(projects, (project) => (
+            <ProjectCard key={project.node.id} project={project}/>
+          ))}
+        </PortfolioGrid>
         <footer>
         </footer>
       </article>
@@ -66,6 +84,22 @@ export const pageQuery = graphql`
         title
       }
     }
+
+    allMarkdownRemark(filter: {fields: {slug: {ne: $slug}}, frontmatter: {type: {eq: "project"}}}) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            featuredImage
+            title
+          }
+        }
+      }
+    }
+
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
