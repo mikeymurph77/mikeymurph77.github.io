@@ -101,7 +101,7 @@ const Resume = ({ data, location }) => {
       <SectionTitle>Work Experience</SectionTitle>
       <Divider/>
       <JobExperience>
-        <JobTitle>Software Engineer</JobTitle>
+        <JobTitle>Senior Software Engineer</JobTitle>
         <JobMetaData><Company>Jobcase</Company> <Timeframe>2016 - Present</Timeframe></JobMetaData>
         <Description>
           Working as a Fullstack Software Developer, building a social platform dedicated to empowering and advocating the world's workforce.
