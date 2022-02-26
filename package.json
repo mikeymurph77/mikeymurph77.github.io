@@ -33,7 +33,7 @@
     "gatsby-transformer-remark": "^2.8.20",
     "gatsby-transformer-sharp": "^3.0.0",
     "lodash": "^4.17.19",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.27.0",
     "react": "^17.0.1",
     "react-burger-menu": "^3.0.3",
     "react-device-detect": "^1.15.0",
